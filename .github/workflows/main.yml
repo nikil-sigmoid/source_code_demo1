@@ -29,3 +29,4 @@ jobs:
           owner: nikil-sigmoid
           repo: deployment_demo1
           github_token: ${{ secrets.PAT }}
+          workflow_file_name: main.yml
