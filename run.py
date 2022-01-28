@@ -1,6 +1,6 @@
 print("Hello there")
 
-with open("sample.txt",'w') as f:
+with open("sample.txt",'r') as f:
   for line in f.readlines():
     print(line)
 
