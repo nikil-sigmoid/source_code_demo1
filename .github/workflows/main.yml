@@ -10,9 +10,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+#       - uses: convictional/trigger-workflow-and-wait@v1.3.0
+#         with:
+#           owner: nikil-sigmoid
+#           repo: deployment_demo1
+#           github_token: ${{ secrets.PAT }}
+#           workflow_file_name: main.yml
+          
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
         with:
-          owner: nikil-sigmoid
-          repo: deployment_demo1
-          github_token: ${{ secrets.PAT }}
-          workflow_file_name: main.yml
+          token: ${{ secrets.PAT }}
+          repository: nikil-sigmoid/deployment_demo1
+          event-type: deploy-event
+#           client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
