@@ -3,6 +3,11 @@ Another line
 some random line
 
 
+<<<<<<< HEAD
 We're in the main branch
+=======
+
+this change is in the test branch
+>>>>>>> a17e63aff49eadcb2e29201c13284b8fb3dc2bf4
 last line
 
