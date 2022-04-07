@@ -35,7 +35,9 @@ jobs:
           pwd
           echo pwd is printed
           ls
-          chmod u+x containers/project/sfmc/copy_and_build.sh
+          cd containers/project/sfmc
+          chmod u+x copy_and_build.sh
+          ./copy_and_build.sh
           echo ls is printed
           echo Add other actions to build,
           echo test, and deploy your project.
